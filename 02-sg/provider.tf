@@ -7,7 +7,7 @@ terraform {
   }
  backend "s3" {
     bucket         = "dev-daw9-hemanth-2026"
-    key            = "exp-dev-vpc/terraform.tfstate"
+    key            = "exp-dev-sg/terraform.tfstate"
     region         = "us-east-1"
     dynamodb_table = "daws83s"
   }
