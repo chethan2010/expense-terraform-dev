@@ -7,11 +7,10 @@ data "aws_ssm_parameter" "public_subnet_ids" {
 }
 
 data "aws_ami" "ami_info" {
-  most_recent = true
-  owners      = ["008128650009"]
+  owners = ["008128650009"]
 
   filter {
-    name   = "name"
-    values = ["RHEL-9-DevOps-Practice*"]
+    name   = "image-id"
+    values = ["ami-0220d79f3f480ecf5"]
   }
 }
