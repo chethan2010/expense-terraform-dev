@@ -24,7 +24,7 @@ module "db" {
   create_db_subnet_group = false
   db_subnet_group_name   = data.aws_ssm_parameter.db_subnet_group_name.value
 
-  family               = "mysql8.0"
+  family               = "mysql8.4"
   major_engine_version = "8.4"
 
   deletion_protection = false
