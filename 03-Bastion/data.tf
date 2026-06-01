@@ -7,7 +7,7 @@ data "aws_ssm_parameter" "public_subnet_ids" {
 }
 
 data "aws_ami" "ami_info" {
-  owners = ["008128650009"]
+  most_recent = true
 
   filter {
     name   = "image-id"
