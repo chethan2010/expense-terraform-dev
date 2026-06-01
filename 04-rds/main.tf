@@ -8,11 +8,11 @@ module "db" {
   instance_class    = "db.t3.micro"
   allocated_storage = 5
 
-  name  = "transactions"
-  username = "root"
-  password = "ExpenseApp1"
- skip_final_snapshot = true
-  port = 3306
+  db_name          = "transactions"
+  username         = "root"
+ manage_master_user_password = true
+  skip_final_snapshot = true
+  port             = 3306
 
   vpc_security_group_ids = [
     data.aws_ssm_parameter.db_sg_id.value
@@ -28,4 +28,4 @@ module "db" {
   major_engine_version = "8.0"
 
   deletion_protection = false
- 
+}
