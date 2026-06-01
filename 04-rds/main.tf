@@ -10,7 +10,7 @@ module "db" {
 
   db_name          = "transactions"
   username         = "root"
- manage_master_user_password = true
+ manage_master_user_password = false
   skip_final_snapshot = true
   port             = 3306
 
